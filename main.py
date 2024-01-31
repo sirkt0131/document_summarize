@@ -74,4 +74,4 @@ if content.get_summarize_button():
     output_price_txt = '{:.5f}'.format(output_price)
     total_price_txt = '{:.5f}'.format(total_price)
 
-    logger.log(model_info["model_name"], content_name, content_type, input_message_token_num, input_price_txt, output_message_token_num, output_price_txt, total_price_txt)
+    logger.log(model_info["model_name"], content_name, content_type, input_message_token_num, input_price_txt, output_message_token_num, output_price_txt, total_price_txt, result)
