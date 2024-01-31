@@ -23,11 +23,11 @@ class Setting:
         return self.model, self.language
 
     def show_upload_setting(self):
-        url_mode = st.selectbox('URL Load Mode',['url', 'pdf', 'pdf_url'])
-        if url_mode == 'pdf_url':
+        url_mode = st.selectbox('URL Load Mode',['URL', 'PDF', 'PDF_URL'])
+        if url_mode == 'PDF_URL':
             self.content = st.text_input('URL')
             self.content_type = "pdf_url"
-        elif url_mode == 'pdf':
+        elif url_mode == 'PDF':
             self.content = st.file_uploader("Upload pdf file", type='pdf')
             self.content_type = "pdf"
         else:
