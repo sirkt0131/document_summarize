@@ -25,7 +25,9 @@ try:
     match content_type:
         case "pdf":
             text=Loader.load_pdf(content_source)
-        case "url":
+        case "pdf_url":
+            text=Loader.load_pdf_url(content_source)
+        case "txt":
             text=Loader.load_url(content_source)
         case _:
             raise Exception
