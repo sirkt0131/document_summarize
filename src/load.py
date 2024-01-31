@@ -6,7 +6,6 @@ from bs4 import BeautifulSoup
 
 class Loader:
     def load_pdf(file_path):
-        print(file_path)
         reader = PdfReader(file_path)
         texts = ""
         for page in reader.pages:
@@ -14,13 +13,11 @@ class Loader:
         return texts
 
     def load_pdf_url(document_url):
-        print(document_url)
         bit_data = request.urlopen(document_url).read()
         data = BytesIO(bit_data)
         return Loader.load_pdf(data)
     
     def load_url(url):
-        print(url)
         response = requests.get(url)
         soup = BeautifulSoup(response.content, 'html.parser')
 
