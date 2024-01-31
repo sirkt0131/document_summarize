@@ -33,7 +33,7 @@ try:
             content_name = content_source
         case "txt":
             text=Loader.load_url(content_source)
-            content_source = content_source
+            content_name = content_source
         case _:
             raise Exception
     text = clean_text(text)
